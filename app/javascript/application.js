@@ -6,13 +6,14 @@ import * as ActiveStorage from "@rails/activestorage"
 import "./channels"
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import Dashboard from './components/dashboard.js'
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-const hello = <div>Hello</div>;
 const container = document.querySelector('#reactContainer');
-
+const jsonData = document.getElementById('json-data');
+const customers = JSON.parse(jsonData.getAttribute('data'));
 const root = ReactDOM.createRoot(container);
-root.render(hello);
+root.render(<Dashboard customers={customers.customers} />);
