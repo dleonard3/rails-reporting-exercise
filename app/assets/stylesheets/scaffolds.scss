@@ -23,6 +23,18 @@ a:hover {
   color: #fff;
   background-color: #000; }
 
+table, th, td {
+  border: 1px solid;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table {
+  width: 90%;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
 th {
   padding-bottom: 5px; }
 
