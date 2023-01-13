@@ -1,7 +1,8 @@
 class Business < ApplicationRecord
   has_many :jobs, foreign_key: "customer_id"
   has_many :invoices
-  has_many :payments
+  has_many :payments, foreign_key: "payee_id"
+  has_many :payments, foreign_key: "payer_id"
 
   def job_amounts
     jobs = Job.where(customer_id: id)
@@ -24,6 +25,6 @@ class Business < ApplicationRecord
   end
 
   def remaining_invoice_amounts
-    
+
   end
 end

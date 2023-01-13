@@ -14,6 +14,6 @@ ActiveStorage.start()
 
 const container = document.querySelector('#reactContainer');
 const jsonData = document.getElementById('json-data');
-const customers = JSON.parse(jsonData.getAttribute('data'));
+const data = JSON.parse(jsonData.getAttribute('data'));
 const root = ReactDOM.createRoot(container);
-root.render(<Dashboard customers={customers.customers} />);
+root.render(<Dashboard customers={data.customers} payments={data.payments} />);
