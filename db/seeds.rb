@@ -35,7 +35,7 @@ bar = TTY::ProgressBar.new("seeding database [:bar]", total: 100)
           job: nil,
           invoice: invoices.sample,
           payment: nil,
-          self_id: job_line_item,
+          self_id: job_line_item.job_id,
           description: job_line_item.description,
           amount: job_line_item.amount
         )
@@ -76,7 +76,7 @@ bar = TTY::ProgressBar.new("seeding database [:bar]", total: 100)
           job: nil,
           invoice: nil,
           payment: payment,
-          self_id: item,
+          self_id: item.id,
           description: item.description,
           amount: item.amount
         )
