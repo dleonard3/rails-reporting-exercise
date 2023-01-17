@@ -1,8 +1,10 @@
 class WelcomeController < ApplicationController
   def index
+    get_customers
+  end
+
+  def get_customers
     @customers = Business.all.includes(:jobs)
-                             .includes(:invoices)
-                             .includes(:payments)
-    @payments = Payment.all
+                             .includes(customer_payments: [:line_items])
   end
 end

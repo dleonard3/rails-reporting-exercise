@@ -16,4 +16,4 @@ const container = document.querySelector('#reactContainer');
 const jsonData = document.getElementById('json-data');
 const data = JSON.parse(jsonData.getAttribute('data'));
 const root = ReactDOM.createRoot(container);
-root.render(<Dashboard customers={data.customers} payments={data.payments} />);
+root.render(<Dashboard customers={data.customers} />);
