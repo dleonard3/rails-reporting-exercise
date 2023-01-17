@@ -79,3 +79,11 @@ div.actions {
 
 label {
   display: block; }
+
+
+ .grid-container {
+   display: grid;
+   grid-template-columns: 5% 35% 20% 20% 20%;
+   justify-content: space-between;
+   align-content: center;
+ }
